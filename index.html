@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGrowth - Verhoog Retentie voor Personal Training Gyms</title>
+    <meta name="description" content="FitGrowth helpt personal training-gyms hun leden langer betrokken te houden en klantverloop met 5-10% te verminderen.">
+    <meta name="keywords" content="personal training, gym, fitness, retention, FitGrowth">
+    <meta name="author" content="FitGrowth">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1rem;
+        }
+        
+        .logo {
+            height: 48px;
+            width: auto;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #333;
+        }
+        
+        /* Hero section */
+        .hero {
+            background-color: #f5f5f5;
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background-color: #dc1a22;
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background-color: #b8151c;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        
+        .btn-outline:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .btn-link {
+            background: none;
+            color: #dc1a22;
+            padding: 0;
+            text-decoration: underline;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 1rem;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Services */
+        .bg-gray {
+            background-color: #f5f5f5;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            border: 1px solid #eee;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+        
+        .contact h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .contact p {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 3rem 1rem;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #aaa;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            text-align: center;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 767px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FitGrowth%20-%20logo-EPgdoPrSgVmDgaTaxZfskzklnMFoZf.png" alt="FitGrowth Logo" class="logo">
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <nav>
+                    <ul id="navMenu">
+                        <li><a href="#over-ons">Over ons</a></li>
+                        <li><a href="#diensten">Diensten</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Laat Je Gym Groeien met Betere Retentie</h1>
+                <p>Verminder klantverloop met 5-10% elke maand en verhoog je omzet met FitGrowth's data-gedreven retentiestrategieën.</p>
+                <a href="#contact" class="btn btn-primary">Start Nu</a>
+            </div>
+        </section>
+
+        <section id="over-ons">
+            <div class="container">
+                <h2>Over FitGrowth</h2>
+                <div class="about-content">
+                    <div>
+                        <img src="https://via.placeholder.com/500x300" alt="Over FitGrowth" class="about-image">
+                    </div>
+                    <div class="about-text">
+                        <h3>Onze Missie</h3>
+                        <p>Bij FitGrowth helpen we personal training-gyms hun leden langer betrokken en gemotiveerd te houden. Met slimme automatiseringen en strategische inzichten verlagen we de klantenverloop met 5-10% iedere maand.</p>
+                        <a href="#" class="btn btn-outline">Meer weten?</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diensten" class="bg-gray">
+            <div class="container">
+                <h2>Onze Diensten</h2>
+                <div class="services-grid">
+                    <div class="card">
+                        <h3>Retentiestrategieën</h3>
+                        <p>Houd je leden langer betrokken door bewezen strategieën en geautomatiseerde opvolging.</p>
+                        <a href="#" class="btn btn-link">Lees Meer</a>
+                    </div>
+                    <div class="card">
+                        <h3>Bedrijfsgroei</h3>
+                        <p>Optimaliseer je bedrijfsvoering en marketing om betere leden te werven en je omzet te vergroten.</p>
+                        <a href="#" class="btn btn-link">Lees Meer</a>
+                    </div>
+                    <div class="card">
+                        <h3>Prestatie-analyses</h3>
+                        <p>Gebruik datagedreven inzichten om je gym te verbeteren en de klanttevredenheid te verhogen.</p>
+                        <a href="#" class="btn btn-link">Lees Meer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Klaar om Je Gym te Laten Groeien?</h2>
+                <p>Plan een gratis strategiegesprek in en ontdek hoe FitGrowth je klantbehoud en winstgevendheid kan verbeteren.</p>
+                <a href="mailto:rtiegelaar@fitgrowth.nl" class="btn btn-primary">Neem Contact Op</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FitGrowth</h3>
+                    <p>Wij helpen personal training-gyms hun leden langer vast te houden en hun winst te verhogen met slimme automatiseringen.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Snelle Links</h3>
+                    <ul>
+                        <li><a href="#over-ons">Over ons</a></li>
+                        <li><a href="#diensten">Diensten</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: rtiegelaar@fitgrowth.nl</p>
+                    <p>Telefoon: 0680153349</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FitGrowth. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
